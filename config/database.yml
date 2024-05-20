@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+development:
+  <<: *default
+  database: activity_tracker_dev
+
+test:
+  <<: *default
+  database: activity_tracker_test
+
+production:
+  <<: *default
+  database: activity_tracker_prod
